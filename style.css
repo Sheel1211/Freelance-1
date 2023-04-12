@@ -1212,3 +1212,9 @@ fieldset {
   outline: 0;
   border: 1px solid #aaa;
 }
+
+#contact-submit label:hover{
+  color:#e7e3e3;
+  border:2px solid blue;
+  
+}
