@@ -1071,7 +1071,7 @@ a {
 }
 
 .body-review {
-  height: 500px;
+  min-height: 500px;
   background-color: #64bcf4;
   padding: 2.5rem;
   box-shadow: 2px 2px 10px 3px #60a9d7;
