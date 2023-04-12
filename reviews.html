@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" href="./img/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+    <script src="./data.js"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            fetch('./data.js')
+            .then(response => response.json())
+            .then(data => {
+             
+              console.log(data);
+            })
+            .catch(error => console.error(error));
+          
+          var reviews = [
+              {
+                "name": "Alex Lee",
+                "date": "2023-06-10",
+                "rating": 5,
+                "review_text": "Playing cricket with my friends was an amazing experience. We all felt so relieved to be away from the stresses of daily life and just enjoy the game together. The joy and camaraderie we felt while playing was truly priceless."
+              },
+              {
+                "name": "Sophia Chen",
+                "date": "2023-07-15",
+                "rating": 4,
+                "review_text": "Playing cricket with my friends on a local ground was so much fun! We all had a great time laughing and joking around, and the pressure of the game just melted away. It was great to be able to enjoy the sport without any worries or stress."
+              },
+              {
+                "name": "James Kim",
+                "date": "2023-08-05",
+                "rating": 3,
+                "review_text": "Playing cricket with my friends was a bit stressful at times, but it was still an enjoyable experience. We all wanted to do our best and win the game, but we also had fun just playing together and enjoying the beautiful day."
+              },
+              {
+                "name": "Maya Patel",
+                "date": "2023-09-01",
+                "rating": 5,
+                "review_text": "Playing cricket with my friends on a local ground was a great way to relieve stress and enjoy some friendly competition. We all had a blast playing together and pushing ourselves to do our best. It was a great way to bond with my friends and enjoy the sport."
+              },
+              {
+                "name": "Jack Wilson",
+                "date": "2023-10-10",
+                "rating": 4,
+                "review_text": "Playing cricket with my friends was a lot of fun, but there was definitely some pressure to perform well. Despite this, we all enjoyed the game and had a great time laughing and joking around. It was a great way to forget about our worries."
+              },
+              {
+                "name": "Emily Singh",
+                "date": "2023-11-15",
+                "rating": 5,
+                "review_text": "Playing cricket with my friends was an amazing experience. We all felt so happy and relaxed while playing, and the pressure of the game just melted away. It was great to be able to enjoy the sport with my friends and forget about the stresses of daily life for a while."
+              }
+            ];  
+          console.log(reviews);
+          
+          var reviewsContainer = document.getElementById("reviews-container");
+  
+          
+          reviews.forEach(function(review) {
+            
+            var reviewElement = document.createElement("div");
+            reviewElement.className = "review";
+  
+            var bodyElement = document.createElement("div");
+            bodyElement.className = "body-review";
+  
+            var nameElement = document.createElement("div");
+            nameElement.className = "name-review";
+            nameElement.textContent = review.name;
+  
+            var placeElement = document.createElement("div");
+            placeElement.className = "place-review";
+            placeElement.textContent = review.date;
+  
+            var ratingElement = document.createElement("div");
+            ratingElement.className = "rating";
+            for (var i = 0; i < review.rating; i++) {
+              var starElement = document.createElement("i");
+              starElement.className = "fas fa-star";
+              ratingElement.appendChild(starElement);
+            }
+  
+            var descElement = document.createElement("div");
+            descElement.className = "desc-review";
+            descElement.textContent = review.review_text;
+  
+            // Add each element to the review element
+            bodyElement.appendChild(nameElement);
+            bodyElement.appendChild(placeElement);
+            bodyElement.appendChild(ratingElement);
+            bodyElement.appendChild(descElement);
+            reviewElement.appendChild(bodyElement);
+  
+            
+            reviewsContainer.appendChild(reviewElement);
+          });
+        };
+      </script>
+</head>
+
+<body>
+    <main>
+        <div class="big-wrapper light">
+            <img src="./img/shape.png" alt="" class="shape" />
+
+            <header>
+                <div class="container">
+                    <a href="index.html">
+                        <div class="logo">
+                            <img src="./img/logo.jpg" alt="Logo" />
+                            <h3>Cricket🏏</h3>
+
+                        </div>
+                    </a>
+
+                    <div class="links">
+                        <ul>
+                            <li><a href="./info.html">About Game</a></li>
+                            <li><a href="./reviews.html">Testimonials</a></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="overlay"></div>
+
+                    <div class="hamburger-menu">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="rev-section">
+
+                <h2 class="title">Here's What Other PLayers Say</h2>
+                <p class="note">"Experience the joy and excitement of sports through the eyes of our community of
+                    passionate reviewers."</p>
+                    <div id="reviews-container" class="reviews">
+                        <!-- Reviews will be dynamically added here -->
+                      </div>
+
+            </div>
+
+        </div>
+
+    </main>
+    <div class="container_contact">  
+        <form id="contact" action="" method="post">
+          <h3>Add Review</h3>
+          
+          <fieldset>
+            <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Date" type="date" tabindex="2" required>
+          </fieldset>
+          <fieldset>
+            <input placeholder="Rating(Out of 5)" type="tel" tabindex="3" required>
+          </fieldset>
+          
+          <fieldset>
+            <textarea placeholder="Add your experience here...." style="border:1px #69b9e8" tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <button name="submit" type="submit" id="contact-submit"  data-submit="...Sending">Submit</button>
+          </fieldset>
+          </form>
+      </div>
+
+
+
+    <!-- JavaScript Files -->
+
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="./app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
