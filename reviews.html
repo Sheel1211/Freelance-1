@@ -114,46 +114,7 @@
 
       reviewsContainer.appendChild(reviewElement);
 
-     console.log(name + date + rating + message);
-     var reviewsContainer = document.getElementById("reviews-container");
-     var reviewElement = document.createElement("div");
-        reviewElement.className = "review";
-
-        var bodyElement = document.createElement("div");
-        bodyElement.className = "body-review";
-
-        var nameElement = document.createElement("div");
-        nameElement.className = "name-review";
-        nameElement.textContent = name;
-
-        var placeElement = document.createElement("div");
-        placeElement.className = "place-review";
-        placeElement.textContent = date;
-
-        var ratingElement = document.createElement("div");
-        ratingElement.className = "rating";
-        for (var i = 0; i < rating; i++) {
-          var starElement = document.createElement("i");
-          starElement.className = "fas fa-star";
-          ratingElement.appendChild(starElement);
-        }
-
-        var descElement = document.createElement("div");
-        descElement.className = "desc-review";
-        descElement.textContent = message;
-
-        // Add each element to the review element
-        bodyElement.appendChild(nameElement);
-        bodyElement.appendChild(placeElement);
-        bodyElement.appendChild(ratingElement);
-        bodyElement.appendChild(descElement);
-        reviewElement.appendChild(bodyElement);
-
-
-        reviewsContainer.appendChild(reviewElement);
-
-
-
+     
     }
   </script>
 </head>
@@ -205,33 +166,7 @@
 
 
   </main>
-  <div class="container_contact">
-    <div id="contact">
-      <h3>Add Review</h3>
-
-      <fieldset>
-        <input placeholder="Your name" type="text" id="name" tabindex="1" required autofocus>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Date" type="date" tabindex="2" id="date" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Rating(Out of 5)" type="tel" id="rating" tabindex="3" required>
-      </fieldset>
-
-      <fieldset>
-        <textarea placeholder="Add your experience here...." id="message" style="border:1px #69b9e8" tabindex="5"
-          required></textarea>
-      </fieldset>
-      <fieldset>
-        <label onclick="display()" id="contact-submit"
-          >Submit</label>
-      </fieldset>
-    </div>
-  </div>
-
-
-  </main>
+  
   <div class="container_contact">
     <div id="contact">
       <h3>Add Review</h3>
