@@ -392,37 +392,35 @@ header .container {
   }
 }
 
-
-.container-fluid{
-    margin-top: 101px;
-    color:#000 !important;
+.container-fluid {
+  margin-top: 101px;
+  color: #000 !important;
 }
 
-.card{
-    color:#757575 !important;
-    background-color: #fff !important;
-    align-items: center !important;
-    background: url('https://i.imgur.com/9djv5sH.jpg');
-    background-size: contain;
-    background-repeat:no-repeat;
-    background-position:  right calc(110px + (150 - 110) * ((100vw - 360px) / (1600 - 360)))  bottom !important;     
-  
+.card {
+  color: #757575 !important;
+  background-color: #fff !important;
+  align-items: center !important;
+  background: url("https://i.imgur.com/9djv5sH.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right
+    calc(110px + (150 - 110) * ((100vw - 360px) / (1600 - 360))) bottom !important;
 }
 
-.btn b{
-    color:green;
+.btn b {
+  color: green;
 }
-.btn:hover{
-    background-color: #69b9e8;
+.btn:hover {
+  background-color: #69b9e8;
 }
-.btn b:hover{
-    color:white;
-}
-
-input{
-    border: 2px solid #69b9e8 !important;
+.btn b:hover {
+  color: white;
 }
 
+input {
+  border: 2px solid #69b9e8 !important;
+}
 
 /* About US  */
 
@@ -1041,73 +1039,68 @@ a {
 
 /* reviews.html */
 
-.rev-section{
+.rev-section {
   margin: auto;
   padding: 0 1rem;
   max-width: 1100px;
   text-align: center;
 }
 
-.title{
+.title {
   font-size: 2.5rem;
   text-transform: uppercase;
   color: rgb(50, 50, 50);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
-.note{
+.note {
   font-size: 1.1rem;
   color: rgb(150, 150, 150);
   font-style: italic;
   color: red;
-  
-
 }
 
-.reviews{
+.reviews {
   margin: 2rem auto;
   display: flex;
   flex-wrap: wrap;
 }
-.review{
+.review {
   margin: 2rem 1rem;
   min-width: 300px;
   flex: 1;
-  
 }
 
-.body-review{
+.body-review {
   height: 500px;
   background-color: #64bcf4;
   padding: 2.5rem;
   box-shadow: 2px 2px 10px 3px #60a9d7;
   border-radius: 20px;
 }
-.name-review{
+.name-review {
   font-size: 1.5rem;
   color: rgb(50, 50, 50);
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
-.place-review{
+.place-review {
   color: red;
   font-style: italic;
 }
-.rating{
+.rating {
   color: rgb(253, 180, 42);
   margin: 1rem 0;
 }
-.desc-review{
+.desc-review {
   line-height: 1.5rem;
   letter-spacing: 1px;
   color: white;
 }
 
-@media (max-width: 678px){
-  .review{
+@media (max-width: 678px) {
+  .review {
     margin-top: 1.5rem;
   }
 }
-
-
 
 .container_contact {
   max-width: 400px;
@@ -1127,7 +1120,7 @@ a {
 }
 
 #contact {
-  background: #F9F9F9;
+  background: #f9f9f9;
   padding: 25px;
   margin: 150px 0;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -1148,11 +1141,12 @@ a {
 }
 
 fieldset {
-  border:#69b9e8 medium none !important;
+  border: #69b9e8 medium none !important;
   margin: 0 0 10px;
   min-width: 100%;
   padding: 0;
   width: 100%;
+  border-radius: 6px;
 }
 
 #contact input[type="text"],
@@ -1162,7 +1156,7 @@ fieldset {
 #contact textarea {
   width: 100%;
   border: 1px solid #ccc;
-  background: #FFF;
+  background: #fff;
   margin: 0 0 5px;
   padding: 10px;
 }
@@ -1189,14 +1183,14 @@ fieldset {
   width: 100%;
   border: none;
   background: #54a3d1;
-  color: #FFF;
+  color: #fff;
   margin: 0 0 5px;
   padding: 10px;
   font-size: 15px;
 }
 
 #contact button[type="submit"]:hover {
-  background: #43A047;
+  background: #43a047;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out;
@@ -1206,15 +1200,15 @@ fieldset {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-
 #contact input:focus,
 #contact textarea:focus {
   outline: 0;
   border: 1px solid #aaa;
 }
 
-#contact-submit label:hover{
-  color:#e7e3e3;
-  border:2px solid blue;
-  
+.contact-submit{
+  color:white;
+  background-color: #60a9d7;
+  border: 2px solid #54a3d1;
+  border-radius:6px;
 }
